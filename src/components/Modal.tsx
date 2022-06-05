@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
-import { nanoid } from 'nanoid'
 import { useStore } from '../store'
 
 export const Modal = () => {
@@ -16,7 +15,7 @@ export const Modal = () => {
   }, [store.newTodoUserId])
 
   const handleSave = () => {
-    const newTodo = { id: nanoid(), completed: false, userId: store.newTodoUserId, todo: str }
+    const newTodo = { id: Date.now(), completed: false, userId: store.newTodoUserId, todo: str }
     const newTodos = [...store.todos, newTodo]
     store.setTodos(newTodos)
     store.setNewTodoUserId(null)
