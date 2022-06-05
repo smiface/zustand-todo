@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+
+  &:focus {
+    outline: 2px #6E3AF5 solid;
+  }
+}
+main {
+  position: relative;
+}
+
+.modal_component {
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal_overlay {
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(244, 246, 250, 0.7);
+    z-index: 2;
+  }
+
+  .modal {
+    border: 2px #9D9EA3 solid;
+    background: #F0EFF6;
+    padding: 55px 15px;
+    border-radius: 15px;
+    z-index: 3 !important;
+    transition: .3s;
+    
+    input {
+      padding: 15px 15px !important;
+      border: 2px #9D9EA3 solid;
+      border-radius: 5px;
+    }
+
+    div {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        border: 2px #9D9EA3 solid;
+        padding: 5px 15px;
+        border-radius: 5px;
+        width: 45%;
+        transition: .3s;
+
+        &:hover {
+          background: #6E3AF5;
+          color: #F4F6FA;
+          transition: .3s;
+        }
+      }
+    }
+  }
+}
+
+.todoList_component {
+  height: 100%;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.list {
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 15px;
+  background: #f4f6fa;
+  position: relative;
+  width: 80%;
+  height: 100%;
+
+
+  h2 {
+    color: #292c35;
+    margin-bottom: 15px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      outline: unset;
+      border: unset;
+      background: unset;
+      font-size: 2rem;
+      margin-top: -35px;
+    }
+  }
+
+  .addTodoBtn {
+    background: #6E3AF5;
+    border-radius: 5px;
+    border: unset;
+    outline: unset;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+}
+
+.todo_item {
+  button {
+    width: 100%;
+    background: unset;
+    border: unset;
+    outline: unset;
+
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    // margin-bottom: 15px;
+    s, p {
+      margin-left: 15px;
+    }
+  }
+}
+
+body {
+  background: #fff;
+}
